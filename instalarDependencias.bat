@@ -11,6 +11,7 @@ if exist %VENV_NAME% (
     python -m venv %VENV_NAME%
     if errorlevel 1 (
         echo Error al crear el entorno virtual. Asegúrate de que Python esté instalado y configurado en PATH.
+        pause
         exit /b 1
     )
     echo Entorno virtual creado con éxito.
@@ -26,6 +27,7 @@ if exist requirements.txt (
     pip install -r requirements.txt
     if errorlevel 1 (
         echo Error al instalar dependencias. Revisa el archivo requirements.txt.
+        pause
         exit /b 1
     )
     echo Dependencias instaladas correctamente.
